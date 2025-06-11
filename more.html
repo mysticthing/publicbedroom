@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>at long last, we're free.</title>
+<link rel="icon" type="image/png" href="/images/favicon.png">
+  <style>
+body {
+      background-color: #000;
+      margin: 0;
+      padding: 0;
+      font-family:Comic Sans MS;
+    }
+
+h1 {
+text-shadow: 1px 1px #020d84;
+color:white;
+font-size:28px;
+  
+}
+
+h2 {
+  text-shadow: 1px 1px #020d84;
+  color:#ff2d96;
+  font-size:20px;
+}
+
+    .page {
+  display: none;
+  position: fixed;
+  color: #020d84;
+  top: 250px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 500px;
+  height: auto;
+  padding: 10px;
+  border-radius: 20px;
+  border: 5px #000 solid;
+  opacity: 85%;
+  background-image: url('/images/page.jpg');
+}
+
+    .page.active {
+      display: block;
+    }
+    
+    .pop {
+      display: none;
+      position: fixed;
+      top:0px;
+      left:0px;
+      width:999px;
+      height:418px;
+      background-image: url('/images/more/secretroom.jpg');
+      background-repeat:no-repeat;
+      background-size:contain;
+            filter: saturate(1.3);
+    }
+
+    .pop.active {
+      display: block;
+    }
+
+    .furniture {
+      position: absolute;
+      cursor: pointer;
+      filter: saturate(1.3);
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
+    
+    .furniture:hover {
+        transform: scale(1.1);;
+    }
+
+    #wings {
+      top: 0px;
+      left: 75px;
+      width: 225px
+    }
+    
+    #tapestry {
+      top: -10px;
+      left: 500px;
+      width: 300px;
+    }
+
+    #self {
+      top: 250px;
+      left: 350px;
+      width: 290px;
+    }
+
+    #vacuum {
+      top:150px;
+      left:650px;
+      width: 225px;
+    }
+    
+    #chair {
+      top: 250px;
+      left: 125px;
+      width: 125px;
+    }
+    
+    #secret {
+      top: 150px;
+      left: 450px;
+      width: 75px;
+    }
+    
+    #letter {
+      top: 281px;
+      left: 612px;
+      width: 108px;
+    }
+    
+    #letterbig {
+      top: 20px;
+      left:300px;
+      width:500px;
+    }
+    
+    .buttons {
+      position: absolute;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+            filter: saturate(1.3);
+    }
+    
+    .buttons:hover {
+        transform: scale(1.1);;
+    }
+    
+    #prev {
+      top: 209px;
+      left:0px;
+      width: 75px;
+    }
+    
+    #close {
+      top: 10px;
+      left:949px;
+      width: 40px;
+    }
+    
+    #fclose {
+      top: 10px;
+      left:470px;
+      width: 40px;
+    }
+
+  </style>
+</head>
+<body>
+
+<!-- Room Background -->
+<img src="/images/more/bg.jpg" style="width: 999px; height: auto; display: block;" />
+
+<!-- Furniture -->
+<!-- Wings -->
+<img src="/images/more/wings.png" class="furniture" id="wings" onclick="showPage('page1')" />
+
+<!-- Tapestry -->
+<img src="/images/more/tapestry.png" class="furniture" id="tapestry" onclick="showPage('page2')" />
+
+<!-- Self -->
+<img src="/images/more/self.png" class="furniture" id="self" onclick="showPage('page3')" />
+
+<!-- Vacuum -->
+<img src="/images/more/vacuum.png" class="furniture" id="vacuum" onclick="showPage('page4')" />
+
+<!-- Chair -->
+<img src="/images/more/chair.png" class="furniture" id="chair" onclick="showPage('page5')" />
+
+<!-- Secret -->
+<img src="/images/more/secret.png" class="furniture" id="secret" onclick="showPage('pop1')" />
+
+<!-- Buttons -->
+<a href="main.html"><img src="/images/prev.png" class="buttons" id="prev" /></a>
+
+<!-- Pages -->
+<div id="page1" class="page">
+  <h2>bed Lore</h2>
+  <p>This is a sacred bed.</p>
+<img src="/images/x.png" class="buttons" id="fclose" onclick="showPage(null)"/>
+</div>
+
+<div id="page2" class="page">
+  <h2>money Lore</h2>
+  <p>This money holds secrets.</p>
+<img src="/images/x.png" class="buttons" id="fclose" onclick="showPage(null)"/>
+</div>
+
+<div id="page3" class="page">
+  <h2>hanging</h2>
+  <p>This girl holds secrets.</p>
+<img src="/images/x.png" class="buttons" id="fclose" onclick="showPage(null)"/>
+</div>
+
+<div id="page4" class="page">
+  <h2>hanging</h2>
+  <p>This girl holds secrets.</p>
+<img src="/images/x.png" class="buttons" id="fclose" onclick="showPage(null)"/>
+</div>
+
+<div id="page5" class="page">
+  <h2>hanging</h2>
+<a href ="https://pinkswanoracle.tumblr.com" target="_blank"> <img src="/images/more/swan.png" width="50px"/></a>
+<img src="/images/x.png" class="buttons" id="fclose" onclick="showPage(null)"/>
+</div>
+
+<div id="pop1" class="pop">
+<img src="/images/more/letterglow.png"  class="furniture" id="letter" onclick="showPage('pop2')" />
+<img src="/images/x.png" class="buttons" id="close" onclick="showPage(null)"/>
+</div>
+
+<div id="page7" class="page">
+  <h2>hanging</h2>
+  <p>This girl holds secrets.</p>
+<img src="/images/x.png" class="buttons" id="fclose" onclick="showPage(null)"/>
+</div>
+
+<div id="page8" class="page">
+  <h2>hanging</h2>
+  <p>This girl holds secrets.</p>
+<img src="/images/x.png" class="buttons" id="fclose" onclick="showPage(null)"/>
+</div>
+
+<div id="pop2" class="pop">
+<img src="/images/more/letter.jpg" class="furniture" id="letterbig" onclick="showPage('pop1')" />
+</div>
+
+<script>
+  function showPage(pageId) {
+    document.querySelectorAll('.page,.pop').forEach(p => p.classList.remove('active'));
+    if (pageId) {
+      document.getElementById(pageId).classList.add('active');
+    }
+  }
+</script>
+
+</body>
+</html>
