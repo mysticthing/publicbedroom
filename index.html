@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>at long last, we're free.</title>
+<link rel="icon" type="image/png" href="/images/favicon.png">
+  <style>
+    body {
+      background-color: #000;
+      margin: 0;
+      padding: 0;
+      font-family:Comic Sans MS;
+    }
+
+h1 {
+  text-shadow: 2px 2px #D7C368;
+  font-size:28px;
+  
+}
+
+h2 {
+  text-shadow: 1px 1px #D7C368;
+  font-size:20px;
+  
+}
+
+h3 {
+font-size:15px;
+  
+}
+    
+button {
+  width: 100px;
+  height: 40px;
+  font-size: 1.2rem;
+  border:2px #919191 solid;
+}
+
+    .page {
+  display: none;
+  position: fixed;
+  color: #020d84;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 500px;
+  height: auto;
+  padding: 10px;
+  border-radius: 20px;
+  border: 5px #000 solid;
+      background-image: url('/images/index/pop.jpg');
+    }
+
+    .page.active {
+      display: block;
+    }
+
+    .stuff {
+      position: absolute;
+      cursor: pointer;
+      filter: saturate(1.3);
+    }
+
+    #welcome {
+      top: 50px;
+      width: 999px;
+      color:#fff;
+    }
+    
+
+    .buttons {
+      position: absolute;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+            filter: saturate(1.4);
+    }
+    
+    .buttons:hover {
+        transform: scale(1.1);;
+    }
+    
+    #enter {
+      top: 209px;
+      left:924px;
+      width: 75px;
+    }
+
+    #close {
+      top: 10px;
+      left:470px;
+      width: 40px;
+    }
+
+  </style>
+</head>
+<body>
+
+<!-- Room Background -->
+<img src="/images/index/unicorn.jpg" style="width: 999px; height: 418px; display: block;" />
+
+<!-- Index -->
+<!-- Welcome -->
+<div class="stuff" id="welcome"> 
+<center>
+<h1>welcome to public bedroom</h1>
+<h1>a remedy for your <u><text onclick="showPage('page1')">homesickness</h1></u></a>
+<h1>a eulogy for a secret world</h1>
+  <br><a href="main.html"><button>Enter</button></a></div></center>
+
+<!-- Pages -->
+<div id="page1" class="page">
+  <h2>are you experiencing <i><u>homesickness</u></i>?</h2>
+  <h3>symptoms are as follows:</h3>
+<p>★ an unshakeable belief that life is meaningless;<br>
+★ a greater fear of the meaningful;<br>
+★ an awful headache, worsened by thoughts of your loved ones;<br>
+★ a longing for a playlist you made when you were 16;<br>
+★ an aversion to kindness accompanied by an inability to speak;<br>
+★ everything tastes bad, everything smells weird;<br>
+★ an urge to give flying a try;<br>
+★ a general wimpy vibe</p>
+
+  </p>
+<img src="/images/x.png" class="buttons" id="close" onclick="showPage(null)"/>
+</div>
+
+<script>
+  function showPage(pageId) {
+    document.querySelectorAll('.page,.pop').forEach(p => p.classList.remove('active'));
+    if (pageId) {
+      document.getElementById(pageId).classList.add('active');
+    }
+  }
+</script>
+
+</body>
+</html>
