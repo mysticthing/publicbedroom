@@ -24,6 +24,61 @@ h2 {
   font-size:20px;
 }
 
+      .mySlides {
+        display: none
+      }
+      img {
+        vertical-align: middle;
+        
+      }
+      .slideshow-container {
+        max-width:180px;
+        position:fixed;
+        top:55px;
+        left:700px;
+        transform: translateX(-50%);
+        margin:auto;
+      }
+      /* Caption text */
+      .slidetext {
+        color: #000;
+        font-size:25px;
+        padding: 10px;
+        border-radius: 20px;
+        position: fixed;
+        top:100px;
+        left:-550px;
+        width: 300px;
+        border: 5px #000 solid;
+        background-image: url('images/page.jpg');
+        text-align: center;
+      }
+      /* Next & previous buttons */
+      .pre,
+      .next {
+        cursor: pointer;
+        position:absolute;
+        top:125px;
+        width:auto;
+        padding:4px;
+        margin-top: 0px;
+        color: black;
+        font-weight: bold;
+        font-size: 25px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+      }
+      /* Position the "next button" to the right */
+      .next {
+        right: -40px;
+        border-radius: 3px 0 0 3px;
+      }
+    .pre {
+        right: 190px;
+        border-radius: 3px 0 0 3px;
+      }
+
     .page {
   display: none;
   position: fixed;
@@ -61,6 +116,23 @@ h2 {
       display: block;
     }
 
+    .closetslide {
+      display: none;
+      position: fixed;
+      top:0px;
+      left:0px;
+      width:999px;
+      height:418px;
+      background-image: url('images/more/closetslide.webp');
+      background-repeat:no-repeat;
+      background-size:contain;
+            filter: saturate(1.3);
+    }
+
+    .closetslide.active {
+      display: block;
+    }
+
     .furniture {
       position: absolute;
       cursor: pointer;
@@ -82,6 +154,12 @@ h2 {
       top: -10px;
       left: 500px;
       width: 300px;
+    }
+
+    #closet {
+      top: 40px;
+      left: 680px;
+      width: 175px;
     }
 
     #self {
@@ -163,6 +241,9 @@ h2 {
 <!-- Tapestry -->
 <img src="images/more/tapestry.png" class="furniture" id="tapestry" onclick="showPage('page2')" />
 
+<!-- Closet -->
+<img src="images/more/closet.png" class="furniture" id="closet" onclick="showPage('closetslide')" />
+
 <!-- Self -->
 <img src="images/more/self.png" class="furniture" id="self" onclick="showPage('page3')" />
 
@@ -230,9 +311,141 @@ h2 {
 <img src="images/more/letter.webp" class="furniture" id="letterbig" onclick="showPage('pop1')" />
 </div>
 
+<div id="closetslide" class="closetslide">
+<div class="slideshow-container">
+     <div class="mySlides fade">
+        <img src="images/more/closet/1.webp" style="width:100%">
+        <div class="slidetext">what I'd wear to count money,</div>
+      </div>
+      
+      <div class="mySlides fade">
+        <img src="images/more/closet/2.webp" style="width:100%">
+        <div class="slidetext">the bowling tournament,</div>
+      </div>
+      
+      <div class="mySlides fade">
+        <img src="images/more/closet/3.webp" style="width:100%">
+<div class="slidetext">the carnival,
+</div></div>
+      
+    <div class="mySlides fade">
+        <img src="images/more/closet/4.webp" style="width:100%">
+        <div class="slidetext">eat some pasta,</div>
+      </div>
+      
+      <div class="mySlides fade">
+        <img src=images/more/closet/5.webp" style="width:100%">
+        <div class="slidetext">pms rage,</div>
+      </div>
+
+      <div class="mySlides fade">
+        <img src="images/more/closet/6.webp" style="width:100%">
+        <div class="slidetext">the thing,</div>
+      </div>
+      
+      <div class="mySlides fade">
+        <img src="images/more/closet/7.webp" style="width:100%">
+        <div class="slidetext">just have a chill day,</div>
+      </div>
+      
+      <div class="mySlides fade">
+        <img src="images/more/closet/8.webp" style="width:100%">
+        <div class="slidetext">the public ice rink with your mom,</div>
+      </div>
+      
+      <div class="mySlides fade">
+        <img src="images/more/closet/9.webp" style="width:100%">
+        <div class="slidetext">school,</div>
+      </div>
+      
+      <div class="mySlides fade">
+        <img src="images/more/closet/10.webp" style="width:100%">
+        <div class="slidetext">the vampire convention,</div></div>
+      
+      <div class="mySlides fade">
+        <img src="images/more/closet/11.webp" style="width:100%">
+        <div class="slidetext">the beach where I get a lot of work done,</div></div>
+      
+      <div class="mySlides fade">
+        <img src="images/more/closet/12.webp" style="width:100%">
+        <div class="slidetext">pride month,</div>
+      </div>
+      
+      <div class="mySlides fade">
+        <img src="images/more/closet/13.webp" style="width:100%">
+<div class="slidetext">My Coronation,</div></div>
+      
+    <div class="mySlides fade">
+        <img src="images/more/closet/14.webp" style="width:100%">
+        <div class="slidetext">go for a walk and maybe buy some treats,</div>
+      </div>
+      
+      <div class="mySlides fade">
+        <img src="images/more/closet/15.webp" style="width:100%">
+        <div class="slidetext">blow the whistle,</div>
+      </div>
+
+      <div class="mySlides fade">
+        <img src="images/more/closet/16.webp" style="width:100%">
+        <div class="slidetext">the gym,</div>
+      </div>
+      
+      <div class="mySlides fade">
+        <img src="images/more/closet/17.webp" style="width:100%">
+        <div class="slidetext">dye my hair,</div>
+      </div>
+      
+      <div class="mySlides fade">
+        <img src="images/more/closet/18.webp" style="width:100%">
+        <div class="slidetext">rob the art gallery,</div>
+      </div>
+      
+      <div class="mySlides fade">
+        <img src="images/more/closet/19.webp" style="width:100%">
+        <div class="slidetext">the mall,</div>
+      </div>
+      
+      <div class="mySlides fade">
+        <img src="images/more/closet/20.webp" style="width:100%">
+        <div class="slidetext">and this is what I'd wear if I was Lois.</div>
+      </div>
+      <a class="pre" onclick="plusSlides(-1)">◄</a>
+      <a class="next" onclick="plusSlides(1)">►</a>
+    </div><img src="https://64.media.tumblr.com/74e2ce142ff9d5236407a7d0d3558f93/43c8c72bc166773b-81/s400x600/d208b2cc576c7245523056c88ff33ca0c541e5c9.pnj" class="buttons" id="close" onclick="showPage(null)"/></div>
+
+       <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if(n > slides.length) {
+          slideIndex = 1
+        }
+        if(n < 1) {
+          slideIndex = slides.length
+        }
+        for(i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for(i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+    </script>
+    
 <script>
   function showPage(pageId) {
-    document.querySelectorAll('.page,.pop').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.page,.pop,.closetslide').forEach(p => p.classList.remove('active'));
     if (pageId) {
       document.getElementById(pageId).classList.add('active');
     }
